@@ -21,6 +21,8 @@
 		ABB483911F97672200747FE3 /* blueViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483901F97672200747FE3 /* blueViewButton.m */; };
 		ABB483941F976C3000747FE3 /* rRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483931F976C3000747FE3 /* rRedView.m */; };
 		ABB483971F98A8BA00747FE3 /* coreAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483961F98A8BA00747FE3 /* coreAnimateViewController.m */; };
+		ABB4839C1F99D09200747FE3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB4839B1F99D09200747FE3 /* QuartzCore.framework */; };
+		ABB4839E1F99D09B00747FE3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB4839D1F99D09B00747FE3 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,12 @@
 		ABB483951F98A8BA00747FE3 /* coreAnimateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coreAnimateViewController.h; sourceTree = "<group>"; };
 		ABB483961F98A8BA00747FE3 /* coreAnimateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreAnimateViewController.m; sourceTree = "<group>"; };
 		ABB483991F98AD4400747FE3 /* p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p@3x.png"; sourceTree = "<group>"; };
+		ABB4839B1F99D09200747FE3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ABB4839D1F99D09B00747FE3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABB4839F1F99D2E500747FE3 /* p@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p@2x.png"; sourceTree = "<group>"; };
+		ABB483A01F99DD6200747FE3 /* haohua01@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haohua01@3x.png"; sourceTree = "<group>"; };
+		ABB483A11F99DD6300747FE3 /* haohua01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "haohua01@2x.png"; sourceTree = "<group>"; };
+		ABB483A21F99E73500747FE3 /* 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 13.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB4839E1F99D09B00747FE3 /* CoreGraphics.framework in Frameworks */,
+				ABB4839C1F99D09200747FE3 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +115,7 @@
 				AB7FB3AC1D7D4F7700536B47 /* Run loopsTests */,
 				AB7FB3B71D7D4F7700536B47 /* Run loopsUITests */,
 				AB7FB3911D7D4F7700536B47 /* Products */,
+				ABB4839A1F99D09100747FE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +186,22 @@
 		ABB483981F98AD4400747FE3 /* source */ = {
 			isa = PBXGroup;
 			children = (
+				ABB483A11F99DD6300747FE3 /* haohua01@2x.png */,
+				ABB483A01F99DD6200747FE3 /* haohua01@3x.png */,
+				ABB483A21F99E73500747FE3 /* 13.png */,
+				ABB4839F1F99D2E500747FE3 /* p@2x.png */,
 				ABB483991F98AD4400747FE3 /* p@3x.png */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		ABB4839A1F99D09100747FE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABB4839D1F99D09B00747FE3 /* CoreGraphics.framework */,
+				ABB4839B1F99D09200747FE3 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

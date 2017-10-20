@@ -26,27 +26,30 @@
 @end
 
 @implementation ViewController
-
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-  //  [self obseverRunloop];
-   // [self lacnchThtead];
-    UITextField * field = [[UITextField alloc] initWithFrame:CGRectMake(10, 40, 100, 40)];
-    field.borderStyle = UITextBorderStyleLine;
-    field.delegate = self;
-    [self.view addSubview:field];
-  //  [self processSource];
-    UIButton *bn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    bn.frame = CGRectMake(100, 200, 100, 40);
-    [bn setTitle:@"wake up" forState:UIControlStateNormal];
-    [bn addTarget: self action:@selector(portWake) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:bn];
-    //事件传递
-    yellowView *yellow = [[yellowView alloc] initWithFrame:CGRectMake(100, 100, 150, 80)];
-    [yellow setBackgroundColor:[UIColor yellowColor]];
-    [self.view addSubview:yellow];
-    
+//    // Do any additional setup after loading the view, typically from a nib.
+//  //  [self obseverRunloop];
+//   // [self lacnchThtead];
+//    UITextField * field = [[UITextField alloc] initWithFrame:CGRectMake(10, 40, 100, 40)];
+//    field.borderStyle = UITextBorderStyleLine;
+//    field.delegate = self;
+//    [self.view addSubview:field];
+//  //  [self processSource];
+//    UIButton *bn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    bn.frame = CGRectMake(100, 200, 100, 40);
+//    [bn setTitle:@"wake up" forState:UIControlStateNormal];
+//    [bn addTarget: self action:@selector(portWake) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:bn];
+//    //事件传递
+//    yellowView *yellow = [[yellowView alloc] initWithFrame:CGRectMake(100, 100, 150, 80)];
+//    [yellow setBackgroundColor:[UIColor yellowColor]];
+//    [self.view addSubview:yellow];
+//
     UIButton *bn1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     bn1.frame = CGRectMake(100, 400, 100, 40);
     [bn1 setTitle:@"animate" forState:UIControlStateNormal];
@@ -55,9 +58,18 @@
 }
 
 -(void)animate{
-    coreAnimateViewController *new = [[coreAnimateViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:new];
-    [self presentViewController:nav animated:YES completion:nil];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIImage *image = [UIImage imageNamed:@"13"];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    //   view.layer.contentsGravity = kCAGravityCenter;
+//    view.backgroundColor = [UIColor redColor];
+    //  view.layer.contentsScale = [UIScreen mainScreen].scale;
+    [self.view addSubview:view];
+    view.layer.contents = (__bridge id _Nullable)(image.CGImage);
+
+//    coreAnimateViewController *new = [[coreAnimateViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:new];
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 # pragma mark dispatch_source
